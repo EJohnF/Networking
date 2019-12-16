@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import { FlatList, Text, Image, View, TextInput } from 'react-native'
 import {connect} from 'react-redux';
 import { fetchMoreBeer } from '../core/actions/beer';
-import { getSnapshot } from '../core/actions/database';
 
 const Beer = (props) => {
   return (
@@ -19,7 +18,6 @@ const Beer = (props) => {
 const MainScreen = (props) => {
   useEffect(() => {
     props.fetchMore()
-    getSnapshot()
   }, [])
   return (
     <>

@@ -13,9 +13,10 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView style={{flex: 1}}>
-      <Provider store={store}>
-        <PostsScreen/>
-      </Provider>
+        <Provider store={store}>
+          <MainScreen/>
+          {/*<PostsScreen/>*/}
+        </Provider>
       </SafeAreaView>
     </>
   );
