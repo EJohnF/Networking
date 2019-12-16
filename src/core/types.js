@@ -1,0 +1,2 @@
+export const FETCH_MORE_BEERS = 'FETCH_MORE_BEERS'
+export const RESET_LIST = 'RESET_LIST'
