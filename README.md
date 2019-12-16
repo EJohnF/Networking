@@ -40,3 +40,7 @@
 ## Ссылка на опрос
 
 https://otus.ru/polls/5402/
+
+
+## ДЗ преподавателю:
+Хорошо работает в связке co styled-component: [Design System](https://github.com/styled-system/styled-system)
