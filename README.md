@@ -12,5 +12,12 @@
 1. Обзор архитектуры приложения. Как подключён thunk
 2. Знакомство с [axios](https://github.com/axios/axios)
 3. Знакомство с [lodash](https://lodash.com/docs/4.17.15)
-4.  
+4. Знакомство с [firabase](https://invertase.io/oss/react-native-firebase/)
  
+## Integrate Firebase
+
+1. Создать проект
+2. Добавить приложения внутри проекта
+3. Пройтись по шагам инструкции (обновить файлы в натив коде)
+4. Переключиться на Realtime database
+6. Разрешить write/read в Rules
