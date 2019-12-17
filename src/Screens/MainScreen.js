@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { FlatList, Text, Image, View, TextInput } from 'react-native'
 import {connect} from 'react-redux';
-import { fetchMoreBeer } from '../core/actions/beer';
+import { fetchMoreBeer, setFilterName } from '../core/actions/beer';
 
 const Beer = (props) => {
   return (
@@ -23,7 +23,10 @@ const MainScreen = (props) => {
     <>
       <TextInput
         style={{height: 60}}
-        placeholder="filter by name"/>
+        placeholder="filter by name"
+        onSubmitEditing={(e) => {
+          props.setFilterName(e.nativeEvent.text)
+        }}/>
 
        <TextInput
          style={{height: 60}}
@@ -43,7 +46,8 @@ const mapState = (state) => ({
 });
 
 const mapAction = (dispatch) => ({
-  fetchMore: () => dispatch(fetchMoreBeer())
+  fetchMore: () => dispatch(fetchMoreBeer()),
+  setFilterName: (name) => dispatch(setFilterName(name))
 });
 
 export default connect(mapState, mapAction)(MainScreen)

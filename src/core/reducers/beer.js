@@ -1,9 +1,10 @@
-import { FETCH_MORE_BEERS, RESET_LIST } from '../types';
+import { FETCH_MORE_BEERS, RESET_LIST, SET_FILTER_NAME } from '../types';
 import { uniqBy } from 'lodash';
 
 const defaultState = {
   list: [],
   page: 1,
+  name: null,
 }
 
 export default (state = defaultState, action) => {
@@ -17,6 +18,12 @@ export default (state = defaultState, action) => {
     case RESET_LIST:
       return {
         ...defaultState
+      }
+    case SET_FILTER_NAME:
+      return {
+        list: [],
+        page: 1,
+        name: action.name,
       }
     default:
       return state
